@@ -39,8 +39,8 @@ export default function FreelanceBrokers() {
             <h2 className="text-4xl font-bold mb-10">{t.conditions.title}</h2>
             <ul className="space-y-6 text-xl">
               {t.conditions.list.map((item: string, i: number) => (
-                <li key={i} className="flex gap-3">
-                  <span className="text-amber-500">Check</span> {item}
+                <li key={item} className="flex gap-3">
+                  <span className="text-amber-500">✓</span> {item}
                 </li>
               ))}
             </ul>

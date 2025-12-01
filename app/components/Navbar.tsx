@@ -29,7 +29,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
         <Link
           href="/"
-          className="text-2xl font-bold text-amber-600 dark:text-amber-500">
+          className="lg:text-2xl text-sm font-bold text-amber-600 dark:text-amber-500">
           Lyschor Real Estate
         </Link>
 
@@ -92,8 +92,8 @@ export default function Navbar() {
           </div>
 
           <Link
-            href="/freelance-brokers"
-            className="bg-amber-500 text-black px-6 py-3 rounded-xl font-bold hover:bg-amber-400 transition">
+            href="/freelance"
+            className="bg-amber-500 text-black hidden lg:block px-6 py-3 rounded-xl font-bold hover:bg-amber-400 transition">
             Earn 100% Commission
           </Link>
         </div>

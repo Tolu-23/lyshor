@@ -60,8 +60,8 @@ export default function RubPayment() {
             </h3>
             <ul className="space-y-3 text-lg">
               {t.advantages.list.map((item: string, i: number) => (
-                <li key={i} className="flex gap-3">
-                  <span className="text-amber-500">Check</span> {item}
+                <li key={item} className="flex gap-3">
+                  <span className="text-amber-500">✓</span> {item}
                 </li>
               ))}
             </ul>
