@@ -10,12 +10,32 @@ export default function Documents() {
   const t = translations[language].Documents;
 
   const docs = [
-    { name: t.list.buyingSelling, id: "RERA ORN: 12345" },
-    { name: t.list.leasing, id: "RERA ORN: 12345" },
-    { name: t.list.tradeLicense, id: "No. 987654" },
-    { name: t.list.escrowTemplate, id: t.list.availableOnRequest },
-    { name: t.list.certificate, id: t.list.dubaiRegistry },
-    { name: t.list.affiliation, id: t.list.officialDocument },
+    {
+      name: t.list.buyingSelling,
+      id: "RERA ORN: 12345",
+      pdf: "/pdf/buying-selling.pdf",
+    },
+    { name: t.list.leasing, id: "RERA ORN: 12345", pdf: "/pdf/leasing.pdf" },
+    {
+      name: t.list.tradeLicense,
+      id: "No. 987654",
+      pdf: "/pdf/trade-license.pdf",
+    },
+    { name: t.list.moa, id: "Memorandum of Association", pdf: "/pdf/moa.pdf" },
+    { name: t.list.tenancy, id: "Tenancy Contract", pdf: "/pdf/tenancy.pdf" },
+    { name: t.list.dreicert, id: "DREI Certificate", pdf: "/pdf/drei.pdf" },
+    {
+      name: t.list.policeClearance,
+      id: "Police Clearance",
+      pdf: "/pdf/police-clearance.pdf",
+    },
+    {
+      name: t.list.incorporation,
+      id: "Certificate of Incorporation",
+      pdf: "/pdf/incorporation.pdf",
+    },
+    { name: t.list.escrowTemplate, id: t.list.availableOnRequest, pdf: null },
+    { name: t.list.affiliation, id: t.list.officialDocument, pdf: null },
   ];
 
   return (
@@ -46,9 +66,21 @@ export default function Documents() {
               </div>
               <h3 className="text-xl font-bold mb-3">{doc.name}</h3>
               <p className="text-sm text-gray-500 mb-6">{doc.id}</p>
-              <button className="text-amber-500 font-semibold hover:underline text-lg group-hover:text-amber-400 transition">
-                {t.viewPdf}
-              </button>
+
+              {/* Real working "View PDF" button */}
+              {doc.pdf ? (
+                <a
+                  href={doc.pdf}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block text-amber-500 font-semibold hover:underline text-lg group-hover:text-amber-400 transition">
+                  {t.viewPdf}
+                </a>
+              ) : (
+                <p className="text-gray-500 text-sm italic">
+                  {t.list.availableOnRequest}
+                </p>
+              )}
             </motion.div>
           ))}
         </div>

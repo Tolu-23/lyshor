@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Phone, MessageCircle, Mail, Linkedin, MapPin } from "lucide-react";
 import { useLanguageStore } from "@/lib/langstore";
 import translations from "@/lib/translation";
+import Image from "next/image";
 
 export default function Footer() {
   const { language } = useLanguageStore();
@@ -15,11 +16,17 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-12 mb-16">
           <div>
-            <Link href="/">
-              <h3 className="text-2xl font-bold text-amber-500 mb-4">
-                Lyschor Real Estate LLC
-              </h3>
-            </Link>
+            <div className="bg-white px-5 py-2 relative w-56 h-12 overflow-hidden rounded-sm">
+              <Link href="/" className="flex items-center">
+                <Image
+                  src="/images/logo.png"
+                  alt="Lyschor Real Estate"
+                  fill
+                  className=" object-contain transition-all duration-300"
+                  priority
+                />
+              </Link>
+            </div>
             <p className="text-foreground/70 leading-relaxed">
               {t.description.line1}
               <br />
@@ -41,21 +48,21 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="#properties"
+                  href="/#properties"
                   className="hover:text-amber-500 transition">
                   {t.quickLinks.properties}
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#rub-payment"
+                  href="/#rub-payment"
                   className="hover:text-amber-500 transition">
                   {t.quickLinks.rub}
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#contact"
+                  href="/#contact"
                   className="hover:text-amber-500 transition">
                   {t.quickLinks.contact}
                 </Link>

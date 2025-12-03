@@ -24,8 +24,6 @@ export default function FreelanceBanner() {
               {i < t.title.split("\n").length - 1 && <br />}
             </span>
           ))}
-          <br />
-          {/* <span className="text-black/80">{t.subtitle}</span> */}
         </h2>
         <p className="text-xl md:text-2xl text-black/90 mb-10 max-w-4xl mx-auto">
           {t.description}

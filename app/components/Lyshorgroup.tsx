@@ -1,8 +1,8 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { useLanguageStore } from "@/lib/langstore";
 import translations from "@/lib/translation";
-import { motion } from "framer-motion";
 
 export default function LyschorGroup() {
   const { language } = useLanguageStore();
@@ -22,9 +22,9 @@ export default function LyschorGroup() {
 
         <div className="grid md:grid-cols-3 gap-12 mb-16">
           {[
-            { num: "15+", label: t.stats.experience },
+            { num: "18+", label: t.stats.experience },
             { num: "10,000+", label: t.stats.projects },
-            { num: "3", label: t.stats.offices },
+            { num: "9", label: t.stats.offices },
           ].map((stat, i) => (
             <motion.div
               key={i}

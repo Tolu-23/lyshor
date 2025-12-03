@@ -72,3 +72,27 @@ body {
     @apply bg-black/50 dark:bg-black/60;
   }
 }
+
+/* Consistent Spacing */
+.section-padding {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  border: none;
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Logo position fix */
+.navbar-logo {
+  position: relative;
+  top: 0;
+  margin-bottom: 0;
+}

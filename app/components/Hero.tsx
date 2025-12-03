@@ -1,9 +1,10 @@
 "use client";
 
-import { useLanguageStore } from "@/lib/langstore";
-import translations from "@/lib/translation";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import { useLanguageStore } from "@/lib/langstore";
+import translations from "@/lib/translation";
+import Link from "next/link";
 
 const images = [
   "/images/dubai-skyline.jpg",
@@ -73,16 +74,16 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start">
-            <a
-              href="#contact"
+            <Link
+              href="/#contact"
               className="btn-primary text-lg md:text-xl px-12 py-6 rounded-xl shadow-2xl hover:shadow-amber-500/50 transition-all duration-300">
               {t.cta1}
-            </a>
+            </Link>
             <a
               href="https://t.me/lyschor"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-outline text-lg md:text-xl px-12 py-6 rounded-xl border-2 border-white/80 backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
+              className="btn-outline text-white/80 text-lg md:text-xl px-12 py-6 rounded-xl border-2 border-white/80 backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
               {t.cta2}
             </a>
           </div>

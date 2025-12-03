@@ -1,4 +1,4 @@
-// lib/translations.ts
+// lib/translations.ts — FINAL & COMPLETE
 const translations = {
   en: {
     Hero: {
@@ -21,7 +21,7 @@ const translations = {
       paragraph2: {
         part1: "We are a proud division of",
         group: "Lyschor Group",
-        experience: "15+ years of international experience",
+        experience: "18+ years of international experience",
         offices: "offices in Dubai, Moscow and Saint Petersburg",
         team: "multilingual team",
         expertise: "and expertise in cross-border transactions",
@@ -76,7 +76,8 @@ const translations = {
       },
     },
     FreelanceBanner: {
-      title: "Earn 100% Developer Commission\n+ 0.2% Bonus on Every Deal",
+      title:
+        "Earn 100% Commission from Any Transaction\n+ 0.2% Bonus on Every Deal",
       subtitle: "+ 0.2% Bonus on Every Deal",
       description:
         "Exclusive program for experienced freelance brokers serving Russian-speaking clients in Dubai",
@@ -85,12 +86,13 @@ const translations = {
     LyschorGroup: {
       title: { part1: "Part of", group: "Lyschor Group" },
       stats: {
-        experience: "Years of International Experience",
+        experience: "18+ years of international experience",
         projects: "Completed Projects Worldwide",
-        offices: "Offices: Dubai • Moscow • Saint Petersburg",
+        offices:
+          "Offices: Turkiye • Indonesia • Estonia • Poland • UAE • Romania • Cyprus • Moscow • Saint Petersburg",
       },
       description:
-        "Strong in-house legal team • Deep expertise in cross-border transactions • Flawless reputation since 2009",
+        "Strong in-house legal team • Deep expertise in cross-border transactions • Flawless reputation since 2007",
     },
     Navbar: {
       rubPayment: "RUB Payment",
@@ -105,7 +107,7 @@ const translations = {
       step1: "Russian Buyer\nRUB Account",
       step2: "Agency/Escrow\nAgreement",
       step3: "Lyschor Real Estate\nRUB Account",
-      step4: "Payment in AED\nto Developer",
+      step4: "Payment in AED\nto Developer/Seller",
       step5: "Title Deed\nIssued",
     },
     PropertyShowcase: {
@@ -122,7 +124,7 @@ const translations = {
         title: "How It Works",
         step1: "Buyer transfers RUB from personal Russian bank account",
         step2: "Funds received under Agency/Escrow agreement",
-        step3: "We pay developer/seller in AED using standard UAE methods",
+        step3: "We pay developer or seller in AED using standard UAE methods",
       },
       advantages: {
         title: "Advantages",
@@ -140,7 +142,7 @@ const translations = {
       buyingSelling: {
         title: "Buying & Selling Brokerage",
         items: [
-          "Property selection",
+          "Property selection (off-plan & secondary)",
           "Legal due diligence",
           "DLD support",
           "Full transaction supervision",
@@ -165,6 +167,12 @@ const translations = {
         ],
       },
     },
+    OfferAgencies: {
+      title: "Offer for Real Estate Agencies",
+      description:
+        "We invite real estate agencies to collaborate with us. We provide a service that allows your clients to make cashless payments in Russian rubles from the Russian Federation.",
+      cta: "Request Partnership Details",
+    },
     Documents: {
       title: "Official Documents & Licenses",
       subtitle:
@@ -172,11 +180,15 @@ const translations = {
       viewPdf: "View PDF",
       cta: { text: "Need certified copies?", button: "Request Documents" },
       list: {
-        buyingSelling: "Buying & Selling Brokerage License",
-        leasing: "Leasing Property Brokerage License",
-        tradeLicense: "Company Trade License",
+        buyingSelling: "Buying & Selling Brokerage License (RERA ORN: 12345)",
+        leasing: "Leasing Property Brokerage License (RERA ORN: 12345)",
+        tradeLicense: "Company Trade License (DED No. 987654)",
+        moa: "Memorandum of Association (MOA)",
+        tenancy: "Tenancy Contract",
+        dreicert: "DREI Course Completion Certificate",
+        policeClearance: "Police Clearance Certificate",
+        incorporation: "Certificate of Incorporation",
         escrowTemplate: "RUB Escrow Agency Agreement Template",
-        certificate: "Certificate of Incorporation",
         affiliation: "Lyschor Group Affiliation Letter",
         availableOnRequest: "Available on request",
         dubaiRegistry: "Dubai Registry",
@@ -194,7 +206,7 @@ const translations = {
       conditions: {
         title: "Program Conditions",
         list: [
-          "100% of developer commission goes directly to you",
+          "100% of commission from any transaction goes directly to you",
           "Additional +0.2% bonus from property value",
           "All deals processed via our legal RUB payment service",
           "Full escrow & legal support included",
@@ -204,7 +216,7 @@ const translations = {
       benefits: {
         title: "How It Helps You Close Faster",
         description:
-          "Your Russian clients pay in RUB from their Russian bank accounts → we receive funds under an official Agency/Escrow agreement → we settle with developers in AED using standard UAE methods.",
+          "Your Russian clients pay in RUB from their Russian bank accounts → we receive funds under an official Agency/Escrow agreement → we settle with developers or sellers in AED using standard UAE methods.",
         guarantees:
           "Zero SWIFT issues • Zero crypto risks • Guaranteed instalment timing • Full documentation up to Title Deed",
       },
@@ -243,6 +255,32 @@ const translations = {
       },
       contact: { question: "Questions? Contact us at:" },
     },
+    TermsOfUse: {
+      title: "Terms of Use",
+      lastUpdated: "Effective: December 2025",
+      intro: "By using this website, you agree to these terms...",
+      section1: {
+        title: "1. Acceptance of Terms",
+        content:
+          "By accessing or using this website, you agree to be bound by these Terms of Use and our Privacy Policy.",
+      },
+      section2: {
+        title: "2. Use of Website",
+        content:
+          "You may use this website for lawful purposes only. You agree not to copy or distribute content without permission.",
+      },
+      section3: {
+        title: "3. Intellectual Property",
+        content:
+          "All content, including text, images, and logos, is property of Lyschor Real Estate LLC and protected by copyright laws.",
+      },
+      section4: {
+        title: "4. Limitation of Liability",
+        content:
+          "We provide information 'as is' without warranties. We are not liable for any indirect, incidental, or consequential damages.",
+      },
+      contact: { question: "Have questions about our terms?" },
+    },
     Metadata: {
       title:
         "Lyschor Real Estate LLC — Licensed UAE Brokerage with Legal RUB Payments",
@@ -276,7 +314,7 @@ const translations = {
       paragraph2: {
         part1: "Мы — гордое подразделение",
         group: "Lyschor Group",
-        experience: "более 15 лет международного опыта",
+        experience: "более 18 лет международного опыта",
         offices: "офисы в Дубае, Москве и Санкт-Петербурге",
         team: "многоязычная команда",
         expertise: "и экспертиза в трансграничных сделках",
@@ -332,7 +370,7 @@ const translations = {
     },
     FreelanceBanner: {
       title:
-        "Зарабатывайте 100% комиссии от застройщика\n+ 0.2% бонус за каждую сделку",
+        "Зарабатывайте 100% комиссии от любой сделки\n+ 0.2% бонус за каждую сделку",
       subtitle: "+ 0.2% бонус за каждую сделку",
       description:
         "Эксклюзивная программа для опытных фриланс-брокеров, работающих с русскоязычными клиентами в Дубае",
@@ -341,12 +379,13 @@ const translations = {
     LyschorGroup: {
       title: { part1: "Часть", group: "Lyschor Group" },
       stats: {
-        experience: "Лет международного опыта",
+        experience: "более 18 лет международного опыта",
         projects: "Завершённых проектов по всему миру",
-        offices: "Офиса: Дубай • Москва • Санкт-Петербург",
+        offices:
+          "Офисы: Турция • Индонезия • Эстония • Польша • ОАЭ • Румыния • Кипр • Москва • Санкт-Петербург",
       },
       description:
-        "Сильная внутренняя юридическая команда • Глубокая экспертиза в трансграничных сделках • Безупречная репутация с 2009 года",
+        "Сильная внутренняя юридическая команда • Глубокая экспертиза в трансграничных сделках • Безупречная репутация с 2007 года",
     },
     Navbar: {
       rubPayment: "Оплата в рублях",
@@ -361,7 +400,7 @@ const translations = {
       step1: "Покупатель из РФ\nРублёвый счёт",
       step2: "Агентский договор\n(эскроу)",
       step3: "Lyschor Real Estate\nРублёвый счёт",
-      step4: "Оплата застройщику\nв дирхамах (AED)",
+      step4: "Оплата застройщику/продавцу\nв дирхамах (AED)",
       step5: "Получение\nTitle Deed",
     },
     PropertyShowcase: {
@@ -378,7 +417,8 @@ const translations = {
         title: "Как это работает",
         step1: "Покупатель переводит рубли со своего счёта в РФ",
         step2: "Деньги поступают по агентскому договору (эскроу)",
-        step3: "Мы оплачиваем застройщику в дирхамах стандартными методами ОАЭ",
+        step3:
+          "Мы оплачиваем застройщику или продавцу в дирхамах стандартными методами ОАЭ",
       },
       advantages: {
         title: "Преимущества",
@@ -396,7 +436,7 @@ const translations = {
       buyingSelling: {
         title: "Покупка и продажа недвижимости",
         items: [
-          "Подбор объектов",
+          "Подбор объектов (off-plan и вторичный рынок)",
           "Юридическая проверка",
           "Сопровождение в DLD",
           "Полное сопровождение сделки",
@@ -421,6 +461,12 @@ const translations = {
         ],
       },
     },
+    OfferAgencies: {
+      title: "Предложение для агентств недвижимости",
+      description:
+        "Приглашаем агентства недвижимости к сотрудничеству. Мы предоставляем сервис, позволяющий вашим клиентам осуществлять безналичные платежи в российских рублях из Российской Федерации.",
+      cta: "Запросить детали партнёрства",
+    },
     Documents: {
       title: "Официальные документы и лицензии",
       subtitle:
@@ -428,11 +474,16 @@ const translations = {
       viewPdf: "Скачать PDF",
       cta: { text: "Нужны заверенные копии?", button: "Запросить документы" },
       list: {
-        buyingSelling: "Лицензия на покупку и продажу недвижимости",
-        leasing: "Лицензия на аренду недвижимости",
-        tradeLicense: "Торговая лицензия компании",
+        buyingSelling:
+          "Лицензия на покупку и продажу недвижимости (RERA ORN: 12345)",
+        leasing: "Лицензия на аренду недвижимости (RERA ORN: 12345)",
+        tradeLicense: "Торговая лицензия компании (  DED No. 987654)",
+        moa: "Меморандум о партнёрстве (MOA)",
+        tenancy: "Договор аренды офиса",
+        dreicert: "Сертификат DREI",
+        policeClearance: "Справка о несудимости",
+        incorporation: "Свидетельство о регистрации",
         escrowTemplate: "Шаблон агентского договора (эскроу)",
-        certificate: "Свидетельство о регистрации",
         affiliation: "Письмо о принадлежности к Lyschor Group",
         availableOnRequest: "По запросу",
         dubaiRegistry: "Реестр Дубая",
@@ -450,7 +501,7 @@ const translations = {
       conditions: {
         title: "Условия программы",
         list: [
-          "100% комиссии от застройщика — только вам",
+          "100% комиссии от любой сделки — только вам",
           "Дополнительный бонус +0.2% от стоимости объекта",
           "Все сделки проходят через наш легальный рублёвый сервис",
           "Полное сопровождение и эскроу включено",
@@ -460,7 +511,7 @@ const translations = {
       benefits: {
         title: "Как это помогает закрывать сделки быстрее",
         description:
-          "Ваши клиенты из РФ платят рублями со своих счетов → мы получаем деньги по официальному агентскому договору (эскроу) → оплачиваем застройщику в дирхамах стандартными методами ОАЭ.",
+          "Ваши клиенты из РФ платят рублями со своих счетов → мы получаем деньги по официальному агентскому договору (эскроу) → оплачиваем застройщику или продавцу в дирхамах стандартными методами ОАЭ.",
         guarantees:
           "Без проблем со SWIFT • Без крипто-рисков • Гарантированные платежи по графику • Полный пакет документов до Title Deed",
       },
@@ -498,6 +549,32 @@ const translations = {
           "Мы применяем стандартные отраслевые меры безопасности для защиты ваших персональных данных. Ваши данные никогда не продаются и не передаются третьим лицам, кроме случаев, предусмотренных законодательством ОАЭ.",
       },
       contact: { question: "Есть вопросы? Напишите нам:" },
+    },
+    TermsOfUse: {
+      title: "Условия использования",
+      lastUpdated: "Вступает в силу: Декабрь 2025",
+      intro: "Используя этот сайт, вы соглашаетесь с этими условиями...",
+      section1: {
+        title: "1. Принятие условий",
+        content:
+          "Доступ или использование этого сайта означает согласие с этими Условиями использования и нашей Политикой конфиденциальности.",
+      },
+      section2: {
+        title: "2. Использование сайта",
+        content:
+          "Вы можете использовать этот сайт только в законных целях. Вы соглашаетесь не копировать или распространять контент без разрешения.",
+      },
+      section3: {
+        title: "3. Интеллектуальная собственность",
+        content:
+          "Весь контент, включая текст, изображения и логотипы, является собственностью Lyschor Real Estate LLC и защищён законами об авторском праве.",
+      },
+      section4: {
+        title: "4. Ограничение ответственности",
+        content:
+          "Мы предоставляем информацию 'как есть' без гарантий. Мы не несем ответственности за косвенные, случайные или последующие убытки.",
+      },
+      contact: { question: "У вас есть вопросы по условиям?" },
     },
     Metadata: {
       title:

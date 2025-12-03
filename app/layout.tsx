@@ -7,22 +7,41 @@ import Providers from "./components/ThemeProvider";
 
 const inter = Inter({ subsets: ["latin", "cyrillic"] });
 
-// Static metadata — works perfectly
 export const metadata = {
+  // Title & description
   title:
     "Lyschor Real Estate LLC — Licensed UAE Brokerage with Legal RUB Payments",
   description:
     "Licensed Dubai real estate brokerage offering 100% legal non-cash RUB payments for Russian buyers.",
-  keywords:
-    "dubai real estate russian, buy property dubai rub, dubai broker rub payment, uae real estate russian buyers, недвижимость дубай рубли, купить квартиру дубай рублями",
+
+  // THIS IS WHAT MAKES YOUR LOGO SHOW IN TABS (2025 way)
+  icons: {
+    icon: ["/logo.png"], // Main favicon
+    shortcut: ["/logo.png"],
+    apple: ["/apple-touch-icon.png"], // iOS
+    other: [
+      {
+        rel: "icon",
+        url: "/logo.png",
+        sizes: "192x192",
+      },
+      {
+        rel: "icon",
+        url: "/logo.png",
+        sizes: "512x512",
+      },
+    ],
+  },
+
   openGraph: {
     title: "Lyschor Real Estate — Legal RUB Payments",
     description:
       "Licensed UAE brokerage with unique escrow RUB payment service",
     url: "https://lyschorrealestate.ae",
-    type: "website",
     images: ["/images/og-image.jpg"],
   },
+
+  // Your other metadata...
   alternates: {
     canonical: "https://lyschorrealestate.ae",
     languages: {
@@ -30,7 +49,6 @@ export const metadata = {
       ru: "https://lyschorrealestate.ae/ru",
     },
   },
-  robots: "index, follow",
 };
 
 export default function RootLayout({
@@ -41,6 +59,7 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning>
       <head>
+        {/* Only JSON-LD here — no <link> tags needed */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -60,8 +79,6 @@ export default function RootLayout({
                 addressRegion: "Dubai",
                 addressCountry: "AE",
               },
-              openingHours: "Mo-Su 09:00-21:00",
-              sameAs: ["https://t.me/lyschor"],
             }),
           }}
         />
