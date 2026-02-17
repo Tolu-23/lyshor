@@ -38,6 +38,27 @@ export default function Documents() {
     { name: t.list.affiliation, id: t.list.officialDocument, pdf: null },
   ];
 
+  const materialCards = [
+    {
+      name: t.list.agenciesOnePager,
+      sub: t.list.agenciesOnePagerSub,
+      href: "/materials/agencies",
+      icon: "🏢",
+    },
+    {
+      name: t.list.brokersOnePager,
+      sub: t.list.brokersOnePagerSub,
+      href: "/materials/brokers",
+      icon: "🤝",
+    },
+    {
+      name: t.list.businessCard,
+      sub: t.list.businessCardSub,
+      href: "/materials/business-card",
+      icon: "💼",
+    },
+  ];
+
   return (
     <main className="min-h-screen pt-32 pb-24 bg-background text-foreground">
       <div className="section-padding">
@@ -52,6 +73,34 @@ export default function Documents() {
           </p>
         </motion.div>
 
+        {/* Material Cards */}
+        <div className="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto mb-20">
+          {materialCards.map((card, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1 }}>
+              <Link
+                href={card.href}
+                className="block bg-card border-2 border-amber-500/30 rounded-3xl p-8 text-center hover:border-amber-500 transition-all duration-500 shadow-xl group hover:shadow-amber-500/20">
+                <div className="bg-amber-500/10 rounded-2xl w-full h-40 mb-6 flex items-center justify-center">
+                  <span className="text-6xl">{card.icon}</span>
+                </div>
+                <h3 className="text-xl font-bold mb-2 group-hover:text-amber-500 transition">
+                  {card.name}
+                </h3>
+                <p className="text-sm text-gray-500 mb-4">{card.sub}</p>
+                <span className="inline-block text-amber-500 font-semibold text-lg group-hover:text-amber-400 transition">
+                  {t.list.viewMaterial} →
+                </span>
+              </Link>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Document Cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
           {docs.map((doc, i) => (
             <motion.div
@@ -67,7 +116,6 @@ export default function Documents() {
               <h3 className="text-xl font-bold mb-3">{doc.name}</h3>
               <p className="text-sm text-gray-500 mb-6">{doc.id}</p>
 
-              {/* Real working "View PDF" button */}
               {doc.pdf ? (
                 <a
                   href={doc.pdf}

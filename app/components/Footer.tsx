@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import Link from "next/link";
@@ -9,14 +10,14 @@ import Image from "next/image";
 export default function Footer() {
   const { language } = useLanguageStore();
   const t = translations[language].Footer;
-  const currentYear = new Date().getFullYear();
+  const currentYear: any = true ? "2025" : new Date().getFullYear();
 
   return (
     <footer className="bg-background border-t border-white/10 dark:border-white/10 pt-20 pb-10">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-12 mb-16">
           <div>
-            <div className="bg-white px-5 py-2 relative w-56 h-12 overflow-hidden rounded-sm">
+            <div className="bg-whites px-5 py-2 relative w-56 h-12 overflow-hidden rounded-sm">
               <Link href="/" className="flex items-center">
                 <Image
                   src="/images/logo.png"
@@ -75,12 +76,12 @@ export default function Footer() {
               {t.contact.title}
             </h4>
             <div className="space-y-4 text-foreground/70">
-              <a
+              {/* <a
                 href="tel:+971..."
                 className="flex items-center gap-3 hover:text-amber-500 transition">
                 <Phone className="w-5 h-5" />
                 <span>+971 ...</span>
-              </a>
+              </a> */}
               <a
                 href="https://t.me/..."
                 target="_blank"

@@ -38,11 +38,11 @@ export default function Navbar() {
   if (!mounted) return null;
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-xl border-b border-white/10">
+    <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between gap-2 h-16 sm:h-20">
           {/* Logo */}
-          <div className="bg-white px-5 py-2 relative w-64 h-14 overflow-hidden rounded-sm shadow-lg">
+          <div className="bg-whites px-5 py-2 relative w-64 h-14 overflow-hidden rounded-sm">
             <Link href="/" className="flex items-center">
               <Image
                 src="/images/logo.png"
@@ -80,7 +80,7 @@ export default function Navbar() {
               <PhoneCall className="w-6 h-6" />
             </a>
 
-            <button
+            {/* <button
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               className="p-2.5 sm:p-3 rounded-xl bg-gray-200 dark:bg-gray-800 hover:scale-110 transition-all">
               {theme === "dark" ? (
@@ -88,7 +88,7 @@ export default function Navbar() {
               ) : (
                 <Moon className="w-5 h-5" />
               )}
-            </button>
+            </button> */}
 
             <div className="flex items-center gap-2 sm:gap-3 text-sm sm:text-base font-medium">
               <button

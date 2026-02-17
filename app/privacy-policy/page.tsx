@@ -15,7 +15,7 @@ export default function PrivacyPolicy() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="max Diver max-w-4xl mx-auto">
+          className="max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-bold text-center mb-12">
             {t.title}
           </h1>
@@ -25,64 +25,61 @@ export default function PrivacyPolicy() {
               {t.lastUpdated}
             </p>
 
-            <motion.section
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}>
-              <h2 className="text-3xl font-bold mb-4">{t.section1.title}</h2>
-              <p>{t.section1.content}</p>
-            </motion.section>
-
-            <motion.section
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.3 }}>
-              <h2 className="text-3xl font-bold mb-4">{t.section2.title}</h2>
-              <ul className="space-y-2">
-                {t.section2.list.map((item: string, i: number) => (
-                  <li key={i}>• {item}</li>
-                ))}
-              </ul>
-            </motion.section>
-
-            <motion.section
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.4 }}>
-              <h2 className="text-3xl font-bold mb-4">{t.section3.title}</h2>
-              <p>{t.section3.intro}</p>
-              <ul className="space-y-2">
-                {t.section3.list.map((item: string, i: number) => (
-                  <li key={i}>• {item}</li>
-                ))}
-              </ul>
-            </motion.section>
-
-            <motion.section
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.5 }}>
-              <h2 className="text-3xl font-bold mb-4">{t.section4.title}</h2>
-              <p>{t.section4.content}</p>
-            </motion.section>
-
-            <motion.section
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.6 }}
-              className="text-center pt-10">
-              <p className="text-lg">{t.contact.question}</p>
-              <a
-                href="mailto:info@lyschorrealestate.ae"
-                className="text-2xl font-bold text-amber-500 hover:text-amber-400 transition">
-                info@lyschorrealestate.ae
-              </a>
-            </motion.section>
+            {t.sections.map(
+              (
+                section: {
+                  title: string;
+                  content?: string;
+                  note?: string;
+                  list?: string[];
+                  paragraphs?: string[];
+                  address?: string[];
+                },
+                i: number,
+              ) => (
+                <motion.section
+                  key={i}
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.1 + i * 0.05 }}>
+                  <h2 className="text-3xl font-bold mb-4">{section.title}</h2>
+                  {section.content && <p>{section.content}</p>}
+                  {section.list && (
+                    <ul className="space-y-2 mt-2">
+                      {section.list.map((item: string, j: number) => (
+                        <li key={j}>• {item}</li>
+                      ))}
+                    </ul>
+                  )}
+                  {section.paragraphs &&
+                    section.paragraphs.map((p: string, j: number) => (
+                      <p key={j} className="mt-2">
+                        {p}
+                      </p>
+                    ))}
+                  {section.note && (
+                    <p className="mt-4 text-foreground/80">{section.note}</p>
+                  )}
+                  {section.address && (
+                    <div className="mt-4 space-y-1">
+                      {section.address.map((line: string, j: number) =>
+                        line.includes("@") ? (
+                          <a
+                            key={j}
+                            href={`mailto:${line}`}
+                            className="block text-amber-500 hover:text-amber-400 transition font-semibold">
+                            {line}
+                          </a>
+                        ) : (
+                          <p key={j}>{line}</p>
+                        ),
+                      )}
+                    </div>
+                  )}
+                </motion.section>
+              ),
+            )}
           </div>
         </motion.div>
       </div>

@@ -26,7 +26,7 @@ const translations = {
         offices: " an international holding with 18+ years of experience. ",
       },
       offices: {
-        dubai: { title: "Dubai Office", status: "Coming Soon" },
+        dubai: { title: "Dubai Office", status: "UAE•Dubai" },
         moscowSpb: {
           title: "Moscow & Saint Petersburg",
           status: "Representative Offices",
@@ -63,7 +63,7 @@ const translations = {
         title: "Offices",
         dubai: {
           city: "Dubai, UAE",
-          address: "Business Bay (address coming soon)",
+          address: "UAE•Dubai",
         },
         russia: {
           cities: "Moscow • Saint Petersburg",
@@ -193,6 +193,13 @@ const translations = {
         incorporation: "Certificate of Incorporation",
         escrowTemplate: "RUB Escrow Agency Agreement Template",
         affiliation: "Lyschor Group Affiliation Letter",
+        agenciesOnePager: "Partnership Guide for Agencies",
+        agenciesOnePagerSub: "Legal RUB payment solution for your clients",
+        brokersOnePager: "Freelance Broker Platform Guide",
+        brokersOnePagerSub: "Licensed platform for your transactions",
+        businessCard: "Business Card Design",
+        businessCardSub: "Clean, elegant, print-ready design",
+        viewMaterial: "View Material",
         availableOnRequest: "Available on request",
         dubaiRegistry: "Dubai Registry",
         officialDocument: "Official Document",
@@ -225,64 +232,156 @@ const translations = {
       },
     },
     PrivacyPolicy: {
-      title: "Privacy Policy",
-      lastUpdated: "Last updated: December 2025",
-      section1: {
-        title: "1. Introduction",
-        content:
-          'Lyschor Real Estate LLC ("we", "our", "us") respects your privacy and is committed to protecting your personal data. This privacy policy explains how we collect, use, and safeguard your information when you visit our website.',
-      },
-      section2: {
-        title: "2. Information We Collect",
-        list: [
-          "Full name",
-          "Phone number (including WhatsApp)",
-          "Email address",
-          "Any information you provide in messages",
-        ],
-      },
-      section3: {
-        title: "3. How We Use Your Information",
-        intro: "We use your data solely to:",
-        list: [
-          "Provide real estate consultation",
-          "Respond to your inquiries",
-          "Send property selections (only with consent)",
-          "Improve our services",
-        ],
-      },
-      section4: {
-        title: "4. Data Security",
-        content:
-          "We implement industry-standard security measures to protect your personal information. Your data is never sold or shared with third parties except as required by UAE law.",
-      },
-      contact: { question: "Questions? Contact us at:" },
+      title: "PRIVACY POLICY",
+      lastUpdated: "Last Updated: January 27th, 2026",
+      sections: [
+        {
+          title: "1. Introduction",
+          content:
+            'LYSCHOR REAL ESTATE L.L.C ("the Agency," "we," "us," or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your personal information when you visit our website https://www.uaekeys.ae (the "Site") and when you voluntarily provide your information through our contact forms.',
+          note: "By using our Site and submitting your information, you consent to the data practices described in this policy.",
+        },
+        {
+          title: "2. Information We Collect",
+          content:
+            "We collect information that you voluntarily provide to us. This includes:",
+          list: [
+            "Personal Identifiers: Such as your name, email address, and phone number, which you submit when requesting that we contact you.",
+            "Communication Data: Any correspondence or inquiries you send to us.",
+          ],
+          note: "We do not automatically collect personal information through cookies or similar tracking technologies on this informational Site. General, non-identifiable site usage data (e.g., browser type, access times) may be collected for analytical purposes.",
+        },
+        {
+          title: "3. How We Use Your Information",
+          content:
+            "We use the information we collect for the following business purposes:",
+          list: [
+            "To respond to your inquiries and provide you with the information or services you request.",
+            "To contact you via email, telephone, or WhatsApp regarding your interest in our real estate services.",
+            "To comply with applicable laws and regulations in the Emirate of Dubai and the United Arab Emirates.",
+          ],
+        },
+        {
+          title: "4. Sharing Your Information",
+          content:
+            "We do not sell, trade, or rent your personal information to third parties. We may share your information only in the following circumstances:",
+          paragraphs: [
+            "With trusted third-party service providers who assist us in operating our business and the Site, provided they agree to keep this information confidential and use it only for the purposes we specify.",
+            "If required to do so by law or in response to valid requests by public authorities (e.g., a court or a government agency in the UAE).",
+            "To protect and defend our rights or property.",
+          ],
+        },
+        {
+          title: "5. Data Security",
+          content:
+            "We implement appropriate technical and organizational measures designed to protect the security of your personal information. However, please be aware that no method of electronic transmission or storage is 100% secure, and we cannot guarantee absolute security.",
+        },
+        {
+          title: "6. Data Retention",
+          content:
+            "We will retain your personal information only for as long as is necessary for the purposes set out in this Privacy Policy, or as required to comply with our legal obligations, resolve disputes, and enforce our agreements.",
+        },
+        {
+          title: "7. Your Rights",
+          content:
+            "Under UAE data protection laws, including Dubai Law No. 26 of 2007 (as amended) and relevant regulations, you may have certain rights regarding your personal information. These may include the right to:",
+          list: [
+            "Request access to the personal information we hold about you.",
+            "Request correction of any inaccurate or incomplete information.",
+            "Request deletion of your personal information, subject to our legal obligations to retain certain data.",
+          ],
+          note: "To exercise any of these rights, please contact us using the details provided in Section 9.",
+        },
+        {
+          title: "8. Changes to This Privacy Policy",
+          content:
+            'We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date. You are advised to review this Privacy Policy periodically for any changes.',
+        },
+        {
+          title: "9. Contact Us",
+          content:
+            "If you have any questions or concerns about this Privacy Policy or our data practices, please contact us at:",
+          address: [
+            "Data Protection Officer / Privacy Officer",
+            "LYSCHOR REAL ESTATE L.L.C",
+            "Office 305, 3rd Floor",
+            "Majid Sultan Building (Building No. 36)",
+            "6a Street, Al Muteena",
+            "Deira, Dubai, UAE",
+            "info@uaekeys.ae",
+          ],
+        },
+      ],
     },
     TermsOfUse: {
-      title: "Terms of Use",
-      lastUpdated: "Effective: December 2025",
-      intro: "By using this website, you agree to these terms...",
-      section1: {
-        title: "1. Acceptance of Terms",
-        content:
-          "By accessing or using this website, you agree to be bound by these Terms of Use and our Privacy Policy.",
-      },
-      section2: {
-        title: "2. Use of Website",
-        content:
-          "You may use this website for lawful purposes only. You agree not to copy or distribute content without permission.",
-      },
-      section3: {
-        title: "3. Intellectual Property",
-        content:
-          "All content, including text, images, and logos, is property of Lyschor Real Estate LLC and protected by copyright laws.",
-      },
-      section4: {
-        title: "4. Limitation of Liability",
-        content:
-          "We provide information 'as is' without warranties. We are not liable for any indirect, incidental, or consequential damages.",
-      },
-      contact: { question: "Have questions about our terms?" },
+      title: "TERMS OF USE",
+      lastUpdated: "Last Updated: January 27th, 2026",
+      sections: [
+        {
+          title: "1. Acceptance of Terms",
+          content:
+            'Welcome to the website of LYSCHOR REAL ESTATE L.L.C ("the Agency," "we," "us," or "our"). By accessing and using this website ("the Site"), you acknowledge that you have read, understood, and agree to be bound by these Terms of Use ("Terms"). If you do not agree to these Terms, you must not use this Site.',
+        },
+        {
+          title: "2. Purpose of the Site",
+          content:
+            "This Site is an informational platform for LYSCHOR REAL ESTATE L.L.C, a real estate agency licensed in the Emirate of Dubai, United Arab Emirates. The Site provides general information about our services and allows users to express interest in contacting us for real estate-related services.",
+        },
+        {
+          title: "3. Intellectual Property Rights",
+          content:
+            "All content on this Site, including but not limited to text, graphics, logos, images, and software, is the property of LYSCHOR REAL ESTATE L.L.C or its content suppliers and is protected by copyright and other intellectual property laws. You may not reproduce, distribute, modify, or otherwise use any content without our prior written permission.",
+        },
+        {
+          title: "4. User Submissions",
+          content:
+            "You may voluntarily submit personal and contact information (e.g., name, email, phone number) through our contact forms. By submitting this information, you:",
+          list: [
+            "Grant us permission to contact you using the provided details to discuss real estate services.",
+            "Confirm that the information you provide is accurate.",
+            "Acknowledge and agree to our Privacy Policy regarding the handling of your personal data.",
+          ],
+          note: "You agree not to submit any information that is unlawful, defamatory, obscene, or infringes on the rights of any third party.",
+        },
+        {
+          title: "5. Disclaimer of Warranties",
+          content:
+            'This Site and its content are provided on an "as is" and "as available" basis. LYSCHOR REAL ESTATE L.L.C makes no representations or warranties of any kind, express or implied, regarding the operation of the Site, the information, content, or materials included. You expressly agree that your use of the Site is at your sole risk.',
+        },
+        {
+          title: "6. Limitation of Liability",
+          content:
+            "To the fullest extent permitted by applicable law, LYSCHOR REAL ESTATE L.L.C, its directors, employees, or agents shall not be liable for any direct, indirect, incidental, special, consequential, or punitive damages arising from your access to, use of, or inability to use this Site, or any errors or omissions in its content.",
+        },
+        {
+          title: "7. External Links",
+          content:
+            "The Site may contain links to third-party websites. These links are provided for your convenience only. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party sites.",
+        },
+        {
+          title: "8. Governing Law and Jurisdiction",
+          content:
+            "These Terms shall be governed by and construed in accordance with the laws of the United Arab Emirates and the Emirate of Dubai. Any dispute arising from or relating to these Terms or your use of the Site shall be subject to the exclusive jurisdiction of the courts of Dubai.",
+        },
+        {
+          title: "9. Amendments",
+          content:
+            'We reserve the right to update, modify, or replace these Terms at any time without prior notice. The "Last Updated" date at the top of this page will be revised accordingly. Your continued use of the Site after any changes constitutes acceptance of those changes.',
+        },
+        {
+          title: "10. Contact Us",
+          content:
+            "For any questions regarding these Terms of Use, please contact us at:",
+          address: [
+            "LYSCHOR REAL ESTATE L.L.C",
+            "Office 305, 3rd Floor",
+            "Majid Sultan Building (Building No. 36)",
+            "6a Street, Al Muteena",
+            "Deira, Dubai, UAE",
+            "info@uaekeys.ae",
+          ],
+        },
+      ],
     },
     Metadata: {
       title:
@@ -323,7 +422,7 @@ const translations = {
         offices: " с опытом работы более 18 лет.",
       },
       offices: {
-        dubai: { title: "Офис в Дубае", status: "Открытие скоро" },
+        dubai: { title: "Офис в Дубае", status: "АЭ•Дубай" },
         moscowSpb: {
           title: "Москва и Санкт-Петербург",
           status: "Представительства",
@@ -360,7 +459,7 @@ const translations = {
         title: "Офисы",
         dubai: {
           city: "Дубай, ОАЭ",
-          address: "Business Bay (адрес скоро появится)",
+          address: "ОАЭ•Дубай",
         },
         russia: {
           cities: "Москва • Санкт-Петербург",
@@ -491,6 +590,14 @@ const translations = {
         incorporation: "Свидетельство о регистрации",
         escrowTemplate: "Шаблон агентского договора (эскроу)",
         affiliation: "Письмо о принадлежности к Lyschor Group",
+        agenciesOnePager: "Руководство для агентств",
+        agenciesOnePagerSub:
+          "Легальный рублёвый платёжный сервис для ваших клиентов",
+        brokersOnePager: "Руководство для фриланс-брокеров",
+        brokersOnePagerSub: "Лицензированная платформа для ваших сделок",
+        businessCard: "Дизайн визитки",
+        businessCardSub: "Чистый, элегантный, готовый к печати дизайн",
+        viewMaterial: "Открыть материал",
         availableOnRequest: "По запросу",
         dubaiRegistry: "Реестр Дубая",
         officialDocument: "Официальный документ",
@@ -523,64 +630,156 @@ const translations = {
       },
     },
     PrivacyPolicy: {
-      title: "Политика конфиденциальности",
-      lastUpdated: "Последнее обновление: Декабрь 2025",
-      section1: {
-        title: "1. Введение",
-        content:
-          'Lyschor Real Estate LLC ("мы", "наш", "нас") уважает вашу конфиденциальность и обязуется защищать ваши персональные данные. Настоящая политика конфиденциальности объясняет, как мы собираем, используем и защищаем вашу информацию при посещении нашего сайта.',
-      },
-      section2: {
-        title: "2. Какие данные мы собираем",
-        list: [
-          "Полное имя",
-          "Номер телефона (включая WhatsApp)",
-          "Адрес электронной почты",
-          "Любая информация, предоставленная в сообщениях",
-        ],
-      },
-      section3: {
-        title: "3. Как мы используем ваши данные",
-        intro: "Мы используем ваши данные исключительно для:",
-        list: [
-          "Предоставления консультаций по недвижимости",
-          "Ответов на ваши запросы",
-          "Отправки подборок объектов (только с согласия)",
-          "Улучшения наших услуг",
-        ],
-      },
-      section4: {
-        title: "4. Безопасность данных",
-        content:
-          "Мы применяем стандартные отраслевые меры безопасности для защиты ваших персональных данных. Ваши данные никогда не продаются и не передаются третьим лицам, кроме случаев, предусмотренных законодательством ОАЭ.",
-      },
-      contact: { question: "Есть вопросы? Напишите нам:" },
+      title: "ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ",
+      lastUpdated: "Последнее обновление: 27 января 2026",
+      sections: [
+        {
+          title: "1. Введение",
+          content:
+            'LYSCHOR REAL ESTATE L.L.C ("Агентство", "мы", "нас", "наш") взяло на себя обязательство защищать вашу конфиденциальность. Данная Политика конфиденциальности объясняет, как мы собираем, используем, раскрываем и защищаем вашу личную информацию при посещении нашего веб-сайта https://www.uaekeys.ae (далее "Сайт") и когда вы добровольно предоставляете информацию через наши формы связи.',
+          note: "Используя наш Сайт и предоставляя вашу информацию, вы соглашаетесь с практиками обработки данных, описанными в этой политике.",
+        },
+        {
+          title: "2. Информация, которую мы собираем",
+          content:
+            "Мы собираем информацию, которую вы добровольно нам предоставляете. Это включает:",
+          list: [
+            "Личные идентификаторы: такие как ваше имя, адрес электронной почты и номер телефона, которые вы предоставляете при запросе связи с нами.",
+            "Данные коммуникации: любая корреспонденция или запросы, которые вы отправляете нам.",
+          ],
+          note: "Мы не собираем личную информацию автоматически с помощью файлов cookie или аналогичных технологий отслеживания на этом информационном Сайте. Общие неидентифицируемые данные об использовании сайта (например, тип браузера, время доступа) могут собираться в аналитических целях.",
+        },
+        {
+          title: "3. Как мы используем вашу информацию",
+          content:
+            "Мы используем собранную информацию в следующих деловых целях:",
+          list: [
+            "Для ответа на ваши запросы и предоставления информации или услуг, которые вы запрашиваете.",
+            "Для связи с вами по электронной почте, телефону или WhatsApp в отношении вашего интереса к нашим услугам в сфере недвижимости.",
+            "Для соответствия применимому законодательству и нормам Эмирата Дубай и Объединённых Арабских Эмиратов.",
+          ],
+        },
+        {
+          title: "4. Обмен вашей информацией",
+          content:
+            "Мы не продаём, не обмениваем и не передаём вашу личную информацию третьим лицам. Мы можем поделиться вашей информацией только в следующих случаях:",
+          paragraphs: [
+            "С доверенными поставщиками услуг, которые помогают нам в деятельности нашего бизнеса и Сайта, при условии, что они соглашаются сохранять эту информацию в тайне и использовать её только в целях, которые мы указываем.",
+            "Если это требуется по закону или в ответ на обоснованные запросы со стороны государственных органов (например, суда или государственного органа ОАЭ).",
+            "Для защиты и отстаивания наших прав или имущества.",
+          ],
+        },
+        {
+          title: "5. Безопасность данных",
+          content:
+            "Мы применяем соответствующие технические и организационные меры для защиты безопасности вашей личной информации. Однако обратите внимание, что ни один метод электронной передачи или хранения не является на 100% безопасным, и мы не можем гарантировать абсолютную безопасность.",
+        },
+        {
+          title: "6. Хранение данных",
+          content:
+            "Мы будем хранить вашу личную информацию только до тех пор, пока это необходимо для целей, изложенных в настоящей Политике конфиденциальности, или в соответствии с требованиями наших юридических обязательств, разрешения споров и исполнения наших соглашений.",
+        },
+        {
+          title: "7. Ваши права",
+          content:
+            "В соответствии с законами ОАЭ о защите данных, включая Закон Дубая № 26 от 2007 года (с изменениями) и соответствующие нормативные акты, вы можете иметь определённые права в отношении вашей личной информации. Они могут включать право на:",
+          list: [
+            "Запрос доступа к личной информации, которую мы храним о вас.",
+            "Запрос на исправление любой неточной или неполной информации.",
+            "Запрос на удаление вашей личной информации с учётом наших юридических обязательств по хранению определённых данных.",
+          ],
+          note: "Для реализации любого из этих прав, пожалуйста, свяжитесь с нами, используя контактные данные, указанные в Разделе 9.",
+        },
+        {
+          title: "8. Изменения в Политике конфиденциальности",
+          content:
+            "Мы можем время от времени обновлять эту Политику конфиденциальности. Мы уведомим вас о любых изменениях, разместив новую Политику конфиденциальности на этой странице и обновив дату «Последнее обновление». Рекомендуем периодически просматривать эту Политику конфиденциальности на предмет изменений.",
+        },
+        {
+          title: "9. Свяжитесь с нами",
+          content:
+            "Если у вас есть вопросы или опасения по поводу этой Политики конфиденциальности или нашей практики защиты данных, свяжитесь с нами:",
+          address: [
+            "Ответственный за защиту данных",
+            "LYSCHOR REAL ESTATE L.L.C",
+            "Офис 305, 3-й этаж",
+            "Majid Sultan Building (Building No. 36)",
+            "6a Street, Al Muteena",
+            "Дейра, Дубай, ОАЭ",
+            "info@uaekeys.ae",
+          ],
+        },
+      ],
     },
     TermsOfUse: {
-      title: "Условия использования",
-      lastUpdated: "Вступает в силу: Декабрь 2025",
-      intro: "Используя этот сайт, вы соглашаетесь с этими условиями...",
-      section1: {
-        title: "1. Принятие условий",
-        content:
-          "Доступ или использование этого сайта означает согласие с этими Условиями использования и нашей Политикой конфиденциальности.",
-      },
-      section2: {
-        title: "2. Использование сайта",
-        content:
-          "Вы можете использовать этот сайт только в законных целях. Вы соглашаетесь не копировать или распространять контент без разрешения.",
-      },
-      section3: {
-        title: "3. Интеллектуальная собственность",
-        content:
-          "Весь контент, включая текст, изображения и логотипы, является собственностью Lyschor Real Estate LLC и защищён законами об авторском праве.",
-      },
-      section4: {
-        title: "4. Ограничение ответственности",
-        content:
-          "Мы предоставляем информацию 'как есть' без гарантий. Мы не несем ответственности за косвенные, случайные или последующие убытки.",
-      },
-      contact: { question: "У вас есть вопросы по условиям?" },
+      title: "УСЛОВИЯ ИСПОЛЬЗОВАНИЯ",
+      lastUpdated: "Последнее обновление: 27 января 2026",
+      sections: [
+        {
+          title: "1. Принятие условий",
+          content:
+            'Добро пожаловать на веб-сайт LYSCHOR REAL ESTATE L.L.C (далее "Агентство", "мы", "нас", "наш"). Получая доступ и используя этот веб-сайт (далее "Сайт"), вы подтверждаете, что прочитали, поняли и согласны соблюдать эти Условия использования (далее "Условия"). Если вы не согласны с этими Условиями, вы не должны использовать этот Сайт.',
+        },
+        {
+          title: "2. Назначение Сайта",
+          content:
+            "Этот Сайт является информационной платформой LYSCHOR REAL ESTATE L.L.C, лицензированного агентства недвижимости в Эмирате Дубай, Объединённые Арабские Эмираты. Сайт предоставляет общую информацию о наших услугах и позволяет пользователям выразить заинтересованность в контакте с нами в отношении услуг в сфере недвижимости.",
+        },
+        {
+          title: "3. Права на интеллектуальную собственность",
+          content:
+            "Весь контент на этом Сайте, включая текст, графику, логотипы, изображения и программное обеспечение, является собственностью LYSCHOR REAL ESTATE L.L.C или её поставщиков контента и защищён авторским правом и другими законами об интеллектуальной собственности. Вы не можете воспроизводить, распространять, изменять или иным образом использовать какой-либо контент без нашего предварительного письменного разрешения.",
+        },
+        {
+          title: "4. Пользовательские данные",
+          content:
+            "Вы можете добровольно предоставить личную и контактную информацию (например, имя, электронную почту, номер телефона) через наши формы связи. Предоставляя эту информацию, вы:",
+          list: [
+            "Предоставляете нам разрешение связаться с вами, используя указанные данные, для обсуждения услуг в сфере недвижимости.",
+            "Подтверждаете, что предоставленная вами информация является точной.",
+            "Принимаете и соглашаетесь с нашей Политикой конфиденциальности в отношении обработки ваших персональных данных.",
+          ],
+          note: "Вы соглашаетесь не предоставлять информацию, которая является незаконной, клеветнической, непристойной или нарушает права третьих лиц.",
+        },
+        {
+          title: "5. Отказ от гарантий",
+          content:
+            "Этот Сайт и его содержимое предоставляются на основе «как есть» и «как доступно». LYSCHOR REAL ESTATE L.L.C не делает никаких заявлений или гарантий любого рода, явных или подразумеваемых, относительно работы Сайта, информации, содержания или материалов. Вы явно соглашаетесь с тем, что использование Сайта осуществляется исключительно на ваш страх и риск.",
+        },
+        {
+          title: "6. Ограничение ответственности",
+          content:
+            "В максимальной степени, допускаемой применимым законодательством, LYSCHOR REAL ESTATE L.L.C, её руководители, сотрудники или агенты не несут ответственности за любые прямые, косвенные, случайные, специальные, косвенные или штрафные убытки, вытекающие из вашего доступа к Сайту, использования Сайта или невозможности использования Сайта, либо из-за любых ошибок или упущений в его контенте.",
+        },
+        {
+          title: "7. Внешние ссылки",
+          content:
+            "Сайт может содержать ссылки на веб-сайты третьих лиц. Эти ссылки предоставлены исключительно для вашего удобства. Мы не контролируем и не несём ответственности за содержание, политику конфиденциальности или практики веб-сайтов третьих лиц.",
+        },
+        {
+          title: "8. Применимое право и юрисдикция",
+          content:
+            "Настоящие Условия регулируются и толкуются в соответствии с законодательством Объединённых Арабских Эмиратов и Эмирата Дубай. Любой спор, возникающий из этих Условий или в связи с ними или использованием вами Сайта, подлежит исключительной юрисдикции судов Дубая.",
+        },
+        {
+          title: "9. Изменения",
+          content:
+            "Мы оставляем за собой право обновлять, изменять или заменять эти Условия в любое время без предварительного уведомления. Дата «Последнее обновление» в верхней части этой страницы будет соответственно пересмотрена. Ваше дальнейшее использование Сайта после любых изменений означает принятие этих изменений.",
+        },
+        {
+          title: "10. Свяжитесь с нами",
+          content:
+            "По любым вопросам, касающимся этих Условий использования, свяжитесь с нами:",
+          address: [
+            "LYSCHOR REAL ESTATE L.L.C",
+            "Офис 305, 3-й этаж",
+            "Majid Sultan Building (Building No. 36)",
+            "6a Street, Al Muteena",
+            "Дейра, Дубай, ОАЭ",
+            "info@uaekeys.ae",
+          ],
+        },
+      ],
     },
     Metadata: {
       title:
