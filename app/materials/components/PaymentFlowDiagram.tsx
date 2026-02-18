@@ -6,11 +6,13 @@ interface PaymentFlowDiagramProps {
 
 const content = {
   en: {
-    step1: {
+    zoneRF: "Russian Federation",
+    zoneUAE: "UAE",
+    buyer: {
       title: "Buyer",
       lines: ["Bank account in the Russian Federation", "Non-cash RUB payment"],
     },
-    step2: {
+    lreRF: {
       title: "Lyschor Real Estate LLC (RF)",
       lines: [
         "Acceptance of non-cash RUB payments",
@@ -18,11 +20,11 @@ const content = {
         "Payment executed within the contractual framework",
       ],
     },
-    step3: {
+    lreUAE: {
       title: "Lyschor Real Estate LLC (UAE)",
       lines: ["Official settlement in Dubai"],
     },
-    step4: {
+    seller: {
       title: "Property Seller",
       lines: ["Off-plan or secondary market", "Receipt of funds in the UAE"],
     },
@@ -30,11 +32,13 @@ const content = {
       "Bottom line: One contract. One legal structure. Transparent flow of funds from the buyer's bank account in the Russian Federation to the seller in Dubai. No cash. No workaround schemes.",
   },
   ru: {
-    step1: {
+    zoneRF: "Российская Федерация",
+    zoneUAE: "ОАЭ",
+    buyer: {
       title: "Покупатель",
       lines: ["Счёт в банке РФ", "Безналичный рублёвый платёж"],
     },
-    step2: {
+    lreRF: {
       title: "Lyschor Real Estate LLC (РФ)",
       lines: [
         "Приём безналичных рублей",
@@ -42,11 +46,11 @@ const content = {
         "Оплата в рамках договора",
       ],
     },
-    step3: {
+    lreUAE: {
       title: "Lyschor Real Estate LLC (ОАЭ)",
       lines: ["Официальный расчёт в Дубае"],
     },
-    step4: {
+    seller: {
       title: "Продавец недвижимости",
       lines: ["Off-plan или вторичный рынок", "Получение средств в ОАЭ"],
     },
@@ -55,120 +59,368 @@ const content = {
   },
 };
 
+/* ────────────────────────────────────────── */
+/* Helper: wrap text into multiple <tspan>s   */
+/* ────────────────────────────────────────── */
+function SvgText({
+  x,
+  y,
+  text,
+  fontSize = 13,
+  fontWeight = "normal",
+  anchor = "middle" as "start" | "middle" | "end",
+  fill = "#000",
+  lineHeight = 1.3,
+}: {
+  x: number;
+  y: number;
+  text: string;
+  fontSize?: number;
+  fontWeight?: string;
+  anchor?: "start" | "middle" | "end";
+  fill?: string;
+  lineHeight?: number;
+}) {
+  const lines = text.split("\n");
+  return (
+    <text
+      x={x}
+      y={y}
+      textAnchor={anchor}
+      fill={fill}
+      fontSize={fontSize}
+      fontWeight={fontWeight}
+      fontFamily="system-ui, -apple-system, sans-serif">
+      {lines.map((line, i) => (
+        <tspan key={i} x={x} dy={i === 0 ? 0 : fontSize * lineHeight}>
+          {line}
+        </tspan>
+      ))}
+    </text>
+  );
+}
+
 export default function PaymentFlowDiagram({ lang }: PaymentFlowDiagramProps) {
   const t = content[lang];
-  const steps = [t.step1, t.step2, t.step3, t.step4];
+
+  const W = 960;
+  const H = 520;
+  const MID_X = 420;
+
+  const orange = "#E97316";
+  const lightBg = "#FFF7ED";
 
   return (
     <div className="w-full">
-      {/* Flow Diagram */}
-      <div className="flex flex-col items-center gap-0">
-        {/* Top row: Step 1 -> Step 2 */}
-        <div className="flex items-stretch justify-center gap-0 w-full">
-          <div className="flex-1 max-w-[260px] bg-amber-400 p-5 border-2 border-amber-500">
-            <p className="font-extrabold text-black text-[15px] leading-tight">
-              {steps[0].title}
-            </p>
-            {steps[0].lines.map((l, i) => (
-              <p key={i} className="text-black text-[13px] leading-snug mt-1">
-                {l}
-              </p>
-            ))}
-          </div>
-          <div className="flex items-center px-3 print:px-2">
-            <svg
-              width="48"
-              height="24"
-              viewBox="0 0 48 24"
-              className="text-blue-700">
-              <polygon
-                points="0,8 34,8 34,0 48,12 34,24 34,16 0,16"
-                fill="currentColor"
-              />
-            </svg>
-          </div>
-          <div className="flex-1 max-w-[320px] bg-amber-400 p-5 border-2 border-amber-500">
-            <p className="font-extrabold text-black text-[15px] leading-tight">
-              {steps[1].title}
-            </p>
-            {steps[1].lines.map((l, i) => (
-              <p key={i} className="text-black text-[13px] leading-snug mt-1">
-                {l}
-              </p>
-            ))}
-          </div>
-          <div className="flex items-center px-3 print:px-2">
-            <svg
-              width="48"
-              height="24"
-              viewBox="0 0 48 24"
-              className="text-blue-700">
-              <polygon
-                points="0,8 34,8 34,0 48,12 34,24 34,16 0,16"
-                fill="currentColor"
-              />
-            </svg>
-          </div>
-          <div className="flex-1 max-w-[260px] bg-amber-400 p-5 border-2 border-amber-500">
-            <p className="font-extrabold text-black text-[15px] leading-tight">
-              {steps[2].title}
-            </p>
-            {steps[2].lines.map((l, i) => (
-              <p key={i} className="text-black text-[13px] leading-snug mt-1">
-                {l}
-              </p>
-            ))}
-          </div>
-        </div>
+      <div className="w-full overflow-x-auto">
+        <svg
+          viewBox={`0 0 ${W} ${H}`}
+          className="w-full max-w-[960px] mx-auto"
+          style={{ minWidth: 680 }}
+          xmlns="http://www.w3.org/2000/svg">
+          {/* ── Background ── */}
+          <rect
+            x={0}
+            y={0}
+            width={W}
+            height={H}
+            rx={8}
+            fill={lightBg}
+            stroke="#e5e7eb"
+            strokeWidth={1}
+          />
 
-        {/* Connecting arrow down-right */}
-        <div className="flex justify-end w-full max-w-[920px] pr-[120px]">
-          <svg
-            width="24"
-            height="48"
-            viewBox="0 0 24 48"
-            className="text-blue-700">
-            <polygon
-              points="8,0 16,0 16,34 24,34 12,48 0,34 8,34"
-              fill="currentColor"
+          {/* ── Divider ── */}
+          <line
+            x1={MID_X}
+            y1={0}
+            x2={MID_X}
+            y2={H}
+            stroke="#d1d5db"
+            strokeWidth={2}
+            strokeDasharray="8 4"
+          />
+
+          {/* ── Zone labels ── */}
+          <SvgText
+            x={MID_X / 2}
+            y={36}
+            text={t.zoneRF}
+            fontSize={22}
+            fontWeight="800"
+            fill="#1f2937"
+          />
+          <SvgText
+            x={MID_X + (W - MID_X) / 2}
+            y={36}
+            text={t.zoneUAE}
+            fontSize={22}
+            fontWeight="800"
+            fill="#1f2937"
+          />
+
+          {/* Arrow marker */}
+          <defs>
+            <marker
+              id="arrowO"
+              markerWidth="10"
+              markerHeight="8"
+              refX="9"
+              refY="4"
+              orient="auto">
+              <polygon points="0 0, 10 4, 0 8" fill={orange} />
+            </marker>
+          </defs>
+
+          {/* ════════════════════════════════════ */}
+          {/*  STEP 1 — BUYER (left zone, top)     */}
+          {/* ════════════════════════════════════ */}
+          <rect
+            x={40}
+            y={70}
+            width={340}
+            height={120}
+            rx={8}
+            fill="#fff"
+            stroke={orange}
+            strokeWidth={2.5}
+          />
+          <rect
+            x={44}
+            y={74}
+            width={332}
+            height={112}
+            rx={6}
+            fill="none"
+            stroke={orange}
+            strokeWidth={1}
+          />
+          <SvgText
+            x={210}
+            y={100}
+            text={t.buyer.title}
+            fontSize={17}
+            fontWeight="800"
+            fill="#1f2937"
+          />
+          {t.buyer.lines.map((line, i) => (
+            <SvgText
+              key={i}
+              x={210}
+              y={122 + i * 18}
+              text={line}
+              fontSize={12}
+              fontWeight="normal"
+              fill="#4b5563"
             />
-          </svg>
-        </div>
+          ))}
 
-        {/* Bottom row: Step 3 (already shown above) -> Step 4 */}
-        <div className="flex items-stretch justify-center gap-0 w-full pl-[200px] print:pl-[160px]">
-          <div className="flex items-center px-3 print:px-2">
-            <svg
-              width="48"
-              height="24"
-              viewBox="0 0 48 24"
-              className="text-blue-700">
-              <polygon
-                points="0,8 34,8 34,0 48,12 34,24 34,16 0,16"
-                fill="currentColor"
-              />
-            </svg>
-          </div>
-          <div className="flex-1 max-w-[280px] bg-amber-400 p-5 border-2 border-amber-500">
-            <p className="font-extrabold text-black text-[15px] leading-tight">
-              {steps[3].title}
-            </p>
-            {steps[3].lines.map((l, i) => (
-              <p key={i} className="text-black text-[13px] leading-snug mt-1">
-                {l}
-              </p>
-            ))}
-          </div>
-        </div>
+          {/* ════════════════════════════════════ */}
+          {/*  STEP 2 — LRE RF (left zone, bottom) */}
+          {/* ════════════════════════════════════ */}
+          <rect
+            x={40}
+            y={260}
+            width={340}
+            height={140}
+            rx={8}
+            fill="#fff"
+            stroke={orange}
+            strokeWidth={2.5}
+          />
+          <SvgText
+            x={210}
+            y={292}
+            text={t.lreRF.title}
+            fontSize={15}
+            fontWeight="800"
+            fill="#1f2937"
+          />
+          {t.lreRF.lines.map((line, i) => (
+            <SvgText
+              key={i}
+              x={210}
+              y={316 + i * 18}
+              text={line}
+              fontSize={12}
+              fontWeight="normal"
+              fill="#4b5563"
+            />
+          ))}
+
+          {/* ════════════════════════════════════ */}
+          {/*  STEP 3 — LRE UAE (right zone, top)  */}
+          {/* ════════════════════════════════════ */}
+          <rect
+            x={470}
+            y={70}
+            width={440}
+            height={120}
+            rx={8}
+            fill="#fff"
+            stroke={orange}
+            strokeWidth={2.5}
+          />
+          <SvgText
+            x={690}
+            y={100}
+            text={t.lreUAE.title}
+            fontSize={17}
+            fontWeight="800"
+            fill="#1f2937"
+          />
+          {t.lreUAE.lines.map((line, i) => (
+            <SvgText
+              key={i}
+              x={690}
+              y={128 + i * 18}
+              text={line}
+              fontSize={13}
+              fontWeight="normal"
+              fill="#4b5563"
+            />
+          ))}
+
+          {/* ════════════════════════════════════ */}
+          {/*  STEP 4 — SELLER (right zone, bottom) */}
+          {/* ════════════════════════════════════ */}
+          <rect
+            x={470}
+            y={260}
+            width={440}
+            height={140}
+            rx={8}
+            fill="#fff"
+            stroke={orange}
+            strokeWidth={2.5}
+          />
+          <SvgText
+            x={690}
+            y={292}
+            text={t.seller.title}
+            fontSize={17}
+            fontWeight="800"
+            fill="#1f2937"
+          />
+          {t.seller.lines.map((line, i) => (
+            <SvgText
+              key={i}
+              x={690}
+              y={320 + i * 18}
+              text={line}
+              fontSize={13}
+              fontWeight="normal"
+              fill="#4b5563"
+            />
+          ))}
+
+          {/* ════════════════════════════════════ */}
+          {/*  FLOW LINES                           */}
+          {/* ════════════════════════════════════ */}
+
+          {/* Step 1 (Buyer) → Step 2 (LRE RF)  — vertical down */}
+          <line
+            x1={210}
+            y1={190}
+            x2={210}
+            y2={260}
+            stroke={orange}
+            strokeWidth={2.5}
+            markerEnd="url(#arrowO)"
+          />
+          {/* Step number label */}
+          <circle cx={210} cy={225} r={14} fill={orange} />
+          <SvgText
+            x={210}
+            y={230}
+            text="1"
+            fontSize={14}
+            fontWeight="800"
+            fill="#fff"
+          />
+
+          {/* Step 2 (LRE RF) → Step 3 (LRE UAE) — horizontal across border */}
+          <line
+            x1={380}
+            y1={160}
+            x2={470}
+            y2={130}
+            stroke={orange}
+            strokeWidth={2.5}
+            markerEnd="url(#arrowO)"
+          />
+          {/* Step number label */}
+          <circle cx={425} cy={142} r={14} fill={orange} />
+          <SvgText
+            x={425}
+            y={147}
+            text="2"
+            fontSize={14}
+            fontWeight="800"
+            fill="#fff"
+          />
+
+          {/* Step 3 (LRE UAE) → Step 4 (Seller) — vertical down */}
+          <line
+            x1={690}
+            y1={190}
+            x2={690}
+            y2={260}
+            stroke={orange}
+            strokeWidth={2.5}
+            markerEnd="url(#arrowO)"
+          />
+          {/* Step number label */}
+          <circle cx={690} cy={225} r={14} fill={orange} />
+          <SvgText
+            x={690}
+            y={230}
+            text="3"
+            fontSize={14}
+            fontWeight="800"
+            fill="#fff"
+          />
+
+          {/* Return flow: Seller → Buyer (bottom path) — Title Deed */}
+          <polyline
+            points="470,400 470,470 40,470 40,190"
+            fill="none"
+            stroke={orange}
+            strokeWidth={2}
+            strokeDasharray="6 3"
+            markerEnd="url(#arrowO)"
+          />
+          {/* Label on bottom return path */}
+          <rect
+            x={150}
+            y={456}
+            width={200}
+            height={22}
+            rx={4}
+            fill={lightBg}
+            stroke="#d1d5db"
+            strokeWidth={0.5}
+          />
+          <SvgText
+            x={250}
+            y={471}
+            text={lang === "en" ? "Title Deed / Oqood" : "Title Deed / Oqood"}
+            fontSize={11}
+            fontWeight="600"
+            fill="#6b7280"
+          />
+        </svg>
       </div>
 
-      {/* Bottom Line / Key Message */}
-      <div className="mt-8 bg-amber-400 border-2 border-amber-500 p-5">
+      {/* ── Bottom Line / Key Message ── */}
+      <div className="mt-6 bg-amber-400 border-2 border-amber-500 p-5 rounded-lg">
         <p className="text-black text-[14px] leading-relaxed">
           <span className="font-extrabold">
-            {lang === "en" ? "Bottom line: " : "(ключевая формула) "}
+            {lang === "en" ? "Bottom line: " : "Итог: "}
           </span>
-          {t.bottomLine.replace("Bottom line: ", "")}
+          {lang === "en"
+            ? t.bottomLine.replace("Bottom line: ", "")
+            : t.bottomLine}
         </p>
       </div>
     </div>
