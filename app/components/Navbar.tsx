@@ -75,7 +75,7 @@ export default function Navbar() {
           {/* Right Side */}
           <div className="flex items-center gap-3 sm:gap-4">
             <a
-              href="https://wa.me/971501234567"
+              href="https://wa.me/+971500999232"
               className="text-green-500 hover:scale-110 transition">
               <PhoneCall className="w-6 h-6" />
             </a>
