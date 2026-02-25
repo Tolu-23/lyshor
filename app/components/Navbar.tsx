@@ -60,7 +60,7 @@ export default function Navbar() {
               { label: t.rubPayment, id: "rub-payment" },
               { label: t.services, id: "services" },
               { label: t.whyUs, id: "why-us" },
-              { label: t.properties, id: "properties" },
+              // { label: t.properties, id: "properties" },
               { label: t.contact, id: "contact" },
             ].map((item) => (
               <button

@@ -47,13 +47,13 @@ export default function Footer() {
                   {t.quickLinks.freelance}
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   href="/#properties"
                   className="hover:text-amber-500 transition">
                   {t.quickLinks.properties}
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link
                   href="/#rub-payment"
@@ -76,14 +76,14 @@ export default function Footer() {
               {t.contact.title}
             </h4>
             <div className="space-y-4 text-foreground/70">
-              {/* <a
-                href="tel:+971..."
+              <a
+                href="tel:+971500999232"
                 className="flex items-center gap-3 hover:text-amber-500 transition">
                 <Phone className="w-5 h-5" />
-                <span>+971 ...</span>
-              </a> */}
+                <span>+971500999232</span>
+              </a>
               <a
-                href="https://t.me/..."
+                href="https://t.me/@lyschorUAE"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 hover:text-amber-500 transition">
@@ -91,13 +91,13 @@ export default function Footer() {
                 <span>Telegram</span>
               </a>
               <a
-                href="mailto:info@lyschorrealestate.ae"
+                href="mailto:info@uaekeys.ae"
                 className="flex items-center gap-3 hover:text-amber-500 transition">
                 <Mail className="w-5 h-5" />
-                <span>info@lyschorrealestate.ae</span>
+                <span>info@uaekeys.ae</span>
               </a>
               <a
-                href="https://linkedin.com/company/..."
+                href="https://linkedin.com/company/lyschor-uae"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 hover:text-amber-500 transition">
