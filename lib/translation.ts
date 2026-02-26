@@ -78,7 +78,7 @@ const translations = {
       },
     },
     FreelanceBanner: {
-      title: "Patner program benefits 100% of your commision",
+      title: "Partner program benefits 100% of your commision",
       subtitle: "+ 0.2% Bonus on Every Deal",
       description:
         "Exclusive program for experienced freelance brokers serving Russian-speaking clients in Dubai",
@@ -222,7 +222,7 @@ const translations = {
     FreelanceBrokers: {
       hero: {
         cta: "Become a Partner Today",
-        title: "Patner program benefits 100% of your commision",
+        title: "Partner program benefits 100% of your commision",
         subtitle: "",
         description:
           "Exclusive program for experienced freelance brokers serving Russian-speaking clients in Dubai",
