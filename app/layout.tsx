@@ -85,9 +85,9 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <Providers>
-          <Navbar />
+          {/* <Navbar /> */}
           {children}
-          <Footer />
+          {/* <Footer /> */}
         </Providers>
       </body>
     </html>
