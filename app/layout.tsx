@@ -10,9 +10,11 @@ const inter = Inter({ subsets: ["latin", "cyrillic"] });
 export const metadata = {
   // Title & description
   title:
-    "Lyschor Real Estate LLC — Licensed UAE Brokerage with Legal RUB Payments",
-  description:
-    "Licensed Dubai real estate brokerage offering 100% legal non-cash RUB payments for Russian buyers.",
+    "Lyschor Real Estate LLC",
+  // title:
+  //   "Lyschor Real Estate LLC — Licensed UAE Brokerage with Legal RUB Payments",
+  // description:
+  //   "Licensed Dubai real estate brokerage offering 100% legal non-cash RUB payments for Russian buyers.",
 
   // THIS IS WHAT MAKES YOUR LOGO SHOW IN TABS (2025 way)
   icons: {
@@ -34,9 +36,10 @@ export const metadata = {
   },
 
   openGraph: {
-    title: "Lyschor Real Estate — Legal RUB Payments",
-    description:
-      "Licensed UAE brokerage with unique escrow RUB payment service",
+    title: "Lyschor Real Estate",
+    // title: "Lyschor Real Estate — Legal RUB Payments",
+    // description:
+    //   "Licensed UAE brokerage with unique escrow RUB payment service",
     url: "https://lyschorrealestate.ae",
     images: ["/images/og-image.jpg"],
   },
@@ -69,8 +72,8 @@ export default function RootLayout({
               name: "Lyschor Real Estate LLC",
               url: "https://lyschorrealestate.ae",
               logo: "https://lyschorrealestate.ae/images/logo.png",
-              description:
-                "Licensed UAE real estate brokerage offering legal RUB non-cash payments for Russian buyers",
+              // description:
+              //   "Licensed UAE real estate brokerage offering legal RUB non-cash payments for Russian buyers",
               telephone: "+971-XXX-XXX-XXXX",
               email: "info@lyschorrealestate.ae",
               address: {
