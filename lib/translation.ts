@@ -408,6 +408,9 @@ const translations = {
       ogDescription:
         "Licensed UAE brokerage with unique escrow RUB payment service",
     },
+    Website: {
+      underDevelopment: "Website under development",
+    },
   },
   ru: {
     Hero: {
@@ -819,6 +822,9 @@ const translations = {
         "Lyschor Real Estate — Легальная оплата в рублях для покупателей из РФ",
       ogDescription:
         "Лицензированное агентство ОАЭ с уникальным сервисом оплаты в рублях через эскроу",
+    },
+    Website: {
+      underDevelopment: "Сайт на обновлении",
     },
   },
 };
