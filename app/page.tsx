@@ -12,19 +12,19 @@ import Services from "./components/Services";
 import Underconstruction from "./components/Underconstruction";
 
 export default function Home() {
-  // return (
-  //   <>
-  //     <Hero />
-  //     <FreelanceBanner />
-  //     <About />
-  //     <LyschorGroup />
-  //     <RubPayment />
-  //     <Services />
-  //     <OfferAgencies />
-  //     {/* <PropertyShowcase /> */}
-  //     <PaymentInfographic />
-  //     <ContactForm />
-  //   </>
-  // );
-  return <Underconstruction />;
+  return (
+    <>
+      <Hero />
+      <FreelanceBanner />
+      <About />
+      <LyschorGroup />
+      <RubPayment />
+      <Services />
+      <OfferAgencies />
+      {/* <PropertyShowcase /> */}
+      <PaymentInfographic />
+      <ContactForm />
+    </>
+  );
+  // return <Underconstruction />;
 }
