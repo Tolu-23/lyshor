@@ -21,7 +21,7 @@ export default function Home() {
       <RubPayment />
       <Services />
       <OfferAgencies />
-      {/* <PropertyShowcase /> */}
+      <PropertyShowcase />
       <PaymentInfographic />
       <ContactForm />
     </>
