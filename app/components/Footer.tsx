@@ -145,9 +145,9 @@ export default function Footer() {
               className="hover:text-amber-500 transition">
               {t.legal.terms}
             </Link>
-            <Link href="/documents" className="hover:text-amber-500 transition">
+            {/* <Link href="/documents" className="hover:text-amber-500 transition">
               {t.legal.documents}
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>

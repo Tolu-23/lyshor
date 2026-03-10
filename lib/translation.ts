@@ -81,7 +81,7 @@ const translations = {
       title: "Partner program benefits 100% of your commision",
       subtitle: "+ 0.2% Bonus on Every Deal",
       description:
-        "Exclusive program for experienced freelance brokers serving Russian-speaking clients in Dubai",
+        "Exclusive program for experienced freelance brokers serving clients in Dubai",
       cta: "Become a Partner → Earn More",
     },
     LyschorGroup: {
@@ -225,14 +225,14 @@ const translations = {
         title: "Partner program benefits 100% of your commision",
         subtitle: "",
         description:
-          "Exclusive program for experienced freelance brokers serving Russian-speaking clients in Dubai",
+          "Exclusive program for experienced freelance brokers serving clients in Dubai",
       },
       conditions: {
         title: "Program Conditions",
         list: [
           "100% of commission from any transaction goes directly to you",
           "Additional +0.2% bonus from property value",
-          "All deals processed via our legal RUB payment service",
+          // "All deals processed via our legal RUB payment service",
           "Full escrow & legal support included",
           "No hidden fees — ever",
         ],

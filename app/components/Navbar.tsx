@@ -60,7 +60,7 @@ export default function Navbar() {
               { label: t.rubPayment, id: "rub-payment" },
               { label: t.services, id: "services" },
               { label: t.whyUs, id: "why-us" },
-              // { label: t.properties, id: "properties" },
+              { label: t.properties, id: "properties" },
               { label: t.contact, id: "contact" },
             ].map((item) => (
               <button
@@ -90,7 +90,7 @@ export default function Navbar() {
               )}
             </button> */}
 
-            <div className="flex items-center gap-2 sm:gap-3 text-sm sm:text-base font-medium">
+            {/* <div className="flex items-center gap-2 sm:gap-3 text-sm sm:text-base font-medium">
               <button
                 onClick={() => setLanguage("en")}
                 className={
@@ -110,7 +110,7 @@ export default function Navbar() {
                 }>
                 RU
               </button>
-            </div>
+            </div> */}
 
             <Link
               href="/freelance"
