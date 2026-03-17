@@ -26,7 +26,7 @@ const translations = {
         offices: " an international holding with 18+ years of experience. ",
       },
       offices: {
-        dubai: { title: "Dubai Office", status: "UAE•Dubai" },
+        dubai: { title: "Dubai Office", status: "Single Business Tower, Office 3001-20, Business Bay, Dubai, United Arab Emirates" },
         moscowSpb: {
           title: "Moscow & Saint Petersburg",
           status: "Representative Offices",
@@ -63,7 +63,7 @@ const translations = {
         title: "Offices",
         dubai: {
           city: "Dubai, UAE",
-          address: "UAE•Dubai",
+          address: "Single Business Tower, Office 3001-20, Business Bay, Dubai, United Arab Emirates",
         },
         russia: {
           cities: "Moscow • Saint Petersburg",
